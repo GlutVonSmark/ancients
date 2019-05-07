@@ -14,22 +14,29 @@ class AncientsList extends Component {
     };
   }
 
-  getGods() {
-    axios
-      .get('https://athena-7.herokuapp.com/ancients.json')
-      .then(response => {
-        this.setState({ gods: response.data, isLoading: false });
-      })
-      .catch(error => console.log(error));
+  async getGods() {
+    try {
+      const response = await axios.get(
+        'https://athena-7.herokuapp.com/ancients.json'
+      );
+      this.setState({ gods: response.data, isLoading: false });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  searchGods(searchTerm) {
-    axios
-      .get(`https://athena-7.herokuapp.com/ancients.json?search=${searchTerm}`)
-      .then(response => {
-        this.setState({ gods: response.data.ancients, isLoading: false });
-      })
-      .catch(error => console.log(error));
+  async searchGods(searchTerm) {
+    try {
+      const response = await axios.get(
+        'https://athena-7.herokuapp.com/ancients.json',
+        {
+          params: { search: searchTerm }
+        }
+      );
+      this.setState({ gods: response.data.ancients, isLoading: false });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   memoizedSearchGod = _.memoize(this.searchGods);
