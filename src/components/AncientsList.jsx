@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 import athena from '../apis/athena';
 import _ from 'lodash';
+import { parse } from 'date-fns';
 import GodItem from './GodItem';
 import SearchField from './SearchField';
 
@@ -59,6 +59,7 @@ class AncientsList extends Component {
     const onSearchTermChange = _.debounce(term => {
       this.onSearchTermChange(term);
     }, 500);
+
     return !this.state.isLoading ? (
       <div>
         <h2>Ancients List</h2>
