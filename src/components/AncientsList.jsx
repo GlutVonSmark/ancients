@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import athena from '../apis/athena';
 import _ from 'lodash';
 import GodItem from './GodItem';
 import SearchField from './SearchField';
@@ -16,9 +17,7 @@ class AncientsList extends Component {
 
   async getGods() {
     try {
-      const response = await axios.get(
-        'https://athena-7.herokuapp.com/ancients.json'
-      );
+      const response = await athena.get('');
       this.setState({ gods: response.data, isLoading: false });
     } catch (error) {
       console.log(error);
@@ -27,12 +26,9 @@ class AncientsList extends Component {
 
   async searchGods(searchTerm) {
     try {
-      const response = await axios.get(
-        'https://athena-7.herokuapp.com/ancients.json',
-        {
-          params: { search: searchTerm }
-        }
-      );
+      const response = await athena.get('', {
+        params: { search: searchTerm }
+      });
       this.setState({ gods: response.data.ancients, isLoading: false });
     } catch (error) {
       console.log(error);

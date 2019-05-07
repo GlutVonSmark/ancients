@@ -1,6 +1,5 @@
-
+you forgot about the date in the api
 make Search a controlled component (any gain from this one?)
-move axios.get to a seperate js file
 Search should probably be not part of list (see the youtube app example)
 
 
