@@ -1,4 +1,5 @@
-you forgot about the date in the api
+task 4
+make everything upppercase and transform data after fetching data?
 make Search a controlled component (any gain from this one?)
 Search should probably be not part of list (see the youtube app example)
 

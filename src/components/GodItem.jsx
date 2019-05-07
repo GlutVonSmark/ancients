@@ -1,12 +1,13 @@
 import React from 'react';
-import { parse, distanceInWordsStrict } from 'date-fns';
+import { parse, distanceInWordsToNow } from 'date-fns';
 
 const GodItem = ({ god }) => {
-  const era =
-    distanceInWordsStrict(Date.now(), parse(god.end_of_an_era)) + ' ago';
+  const era = distanceInWordsToNow(parse(god.end_of_an_era), {
+    addSuffix: true
+  });
   return (
     <li>
-      Name: {god.name.toUpperCase()} superpower: {god.superpower.toUpperCase()}
+      Name: {god.name.toUpperCase()} superpower: {god.superpower.toUpperCase()}{' '}
       end of an era: {era.toUpperCase()}
     </li>
   );
