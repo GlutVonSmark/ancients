@@ -1,0 +1,8 @@
+Search should probably be not part of list
+add throttling to search
+make Search a controlled component
+move axios.get to a seperate js file
+
+
+add css
+add tests
