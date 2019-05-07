@@ -32,6 +32,8 @@ class AncientsList extends Component {
       .catch(error => console.log(error));
   }
 
+  memoizedSearchGod = _.memoize(this.searchGods);
+
   componentDidMount() {
     this.getGods();
   }
@@ -46,7 +48,7 @@ class AncientsList extends Component {
     if (term === '') {
       this.getGods();
     } else {
-      this.searchGods(term);
+      this.memoizedSearchGod(term);
     }
   };
 
