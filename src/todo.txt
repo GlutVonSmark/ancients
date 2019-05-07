@@ -1,8 +1,15 @@
-Search should probably be not part of list
-add throttling to search
-make Search a controlled component
+
+make Search a controlled component (any gain from this one?)
 move axios.get to a seperate js file
+Search should probably be not part of list (see the youtube app example)
 
 
 add css
 add tests
+
+
+-------NOTES-----------
+applicatino was created with create-react-app
+throttling was added to search
+SearchField was considered to be a controlled component
+point 5 was done with lodash memoize function 
