@@ -4,7 +4,7 @@ import AncientsList from './components/AncientsList';
 const App = () => {
   return (
     <div>
-      <h1>Ancients</h1>
+      <h1>Gods of Ancient Times</h1>
       <AncientsList />
     </div>
   );

@@ -1,37 +1,27 @@
 import React, { Component } from 'react';
 
 class SearchField extends Component {
-  constructor() {
-    super();
-    this.state = {
-      term: ''
-    };
-  }
+  state = { term: '' };
 
-  onChange(term) {
-    this.props.onSearchTermChange(term);
-    this.setState({ term });
+  onInputChange(e) {
+    this.setState({ term: e.target.value }, () => {
+      this.props.onSearchTermChange(this.state.term);
+    });
   }
 
   render() {
     return (
-      <input
-        type='text'
-        value={this.state.term}
-        placeholder='search ancients'
-        onChange={e => this.onChange(e.target.value)}
-      />
+      <div>
+        <label>Search:</label>
+        <input
+          type='text'
+          value={this.state.term}
+          placeholder='start typing to search'
+          onChange={e => this.onInputChange(e)}
+        />
+      </div>
     );
   }
 }
-// const SearchField = ({ onSearchTermChange }) => {
-//   return (
-//     <input
-//       type='text'
-//       placeholder='search ancients'
-//       onChange={e => onSearchTermChange(e.target.value)}
-//     />
-//   );
-// };
 
 export default SearchField;

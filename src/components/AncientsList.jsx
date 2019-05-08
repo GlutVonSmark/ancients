@@ -6,14 +6,10 @@ import GodItem from './GodItem';
 import SearchField from './SearchField';
 
 class AncientsList extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      isLoading: true,
-      gods: []
-    };
-  }
+  state = {
+    isLoading: true,
+    gods: []
+  };
 
   async getGods() {
     try {
@@ -62,8 +58,9 @@ class AncientsList extends Component {
 
     return !this.state.isLoading ? (
       <div>
-        <h2>Ancients List</h2>
-        <SearchField onSearchTermChange={term => onSearchTermChange(term)} />
+        {/* <SearchField onSearchTermChange={term => onSearchTermChange(term)} /> */}
+        <SearchField onSearchTermChange={onSearchTermChange} />
+        <h2>The List of Ancients</h2>
         <ul>{this.generateListItems()}</ul>
       </div>
     ) : (
