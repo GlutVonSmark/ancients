@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SearchField.css';
 
 class SearchField extends Component {
   state = { term: '' };
@@ -12,11 +13,12 @@ class SearchField extends Component {
   render() {
     return (
       <div>
-        <label>Search:</label>
+        <label>Filter gods:</label>
         <input
+          className='searchInput'
           type='text'
           value={this.state.term}
-          placeholder='start typing to search'
+          placeholder='start typing to filter'
           onChange={e => this.onInputChange(e)}
         />
       </div>

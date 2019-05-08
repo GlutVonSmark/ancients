@@ -1,0 +1,23 @@
+.godCard {
+  border: 1px solid #cccccc;
+  display: inline-block;
+  text-align: left;
+  width: 400px;
+  margin: 10px;
+  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.godCard__text {
+  margin-left: 100px;
+}
+
+.godCard__text div {
+  border-bottom: 1px solid #cccccc;
+  margin: 5px 0px;
+}
+
+.godCard img {
+  float: left;
+}

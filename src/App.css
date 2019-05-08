@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'pythia';
+  src: local('pythia'), url(./fonts/pythia.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'diogenes';
+  src: local('diogenes'), url(./fonts/DIOGENES.ttf) format('truetype');
+}
+
+h1 {
+  font-family: 'diogenes';
+  font-size: 4.5em;
+}
+
+body {
+  font-family: 'Stylish';
+  font-size: 1.1em;
+}
+
+.container {
+  margin: 0 10vw;
+}
+
+.centered {
+  text-align: center;
+}

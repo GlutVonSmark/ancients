@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import athena from '../apis/athena';
 import _ from 'lodash';
-import SearchField from './SearchField';
-import AncientsList from './AncientsList';
+import SearchField from './SearchField/SearchField';
+import AncientsList from './AncientsList/AncientsList';
 import { UpperCaseArrayObjects } from '../tools';
 
 class Ancients extends Component {
@@ -30,8 +30,7 @@ class Ancients extends Component {
       const response = await athena.get('', {
         params: { search: searchTerm }
       });
-      this.setGods(response.data.ancients);
-      this.setState({ isLoading: false });
+      return response.data.ancients;
     } catch (error) {
       console.log(error);
     }
@@ -43,26 +42,28 @@ class Ancients extends Component {
     this.getGods();
   }
 
-  onSearchTermChange = term => {
+  onSearchTermChange = async term => {
     if (term === '') {
       this.getGods();
     } else {
-      this.memoizedSearchGod(term);
+      const gods = await this.memoizedSearchGod(term);
+      this.setGods(gods);
+      this.setState({ isLoading: false });
     }
   };
 
   render() {
     const onSearchTermChange = _.debounce(term => {
       this.onSearchTermChange(term);
-    }, 500);
+    }, 300);
 
     return !this.state.isLoading ? (
-      <div>
+      <div className='centered'>
         <SearchField onSearchTermChange={onSearchTermChange} />
         <AncientsList gods={this.state.gods} />
       </div>
     ) : (
-      <h2>Loading...</h2>
+      <h2 className='centered'>Loading...</h2>
     );
   }
 }

@@ -1,0 +1,51 @@
+button {
+  font-family: 'Stylish';
+  font-size: 0.9em;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  background-color: white;
+  color: #555555;
+  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+button:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.animated-from-bottom--fast {
+  animation: moveFromBottom 0.5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveFromBottom {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.error {
+  font-weight: bold;
+  color: red;
+  animation: show 1.5s ease-out;
+}
