@@ -1,13 +1,10 @@
 task 4
-make everything upppercase and transform data after fetching data?
-Search should probably be not part of list (see the youtube app example)
+
 
 
 add css
 -container for app div
 -create godCard
-
-add tests
 
 
 -------NOTES-----------

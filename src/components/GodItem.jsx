@@ -7,8 +7,8 @@ const GodItem = ({ god }) => {
   });
   return (
     <div>
-      Name: {god.name.toUpperCase()} superpower: {god.superpower.toUpperCase()}{' '}
-      end of an era: {era.toUpperCase()}
+      Name: {god.name} superpower: {god.superpower} end of an era:{' '}
+      {era.toUpperCase()}
     </div>
   );
 };

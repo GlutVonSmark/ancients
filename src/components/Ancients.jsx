@@ -3,6 +3,7 @@ import athena from '../apis/athena';
 import _ from 'lodash';
 import SearchField from './SearchField';
 import AncientsList from './AncientsList';
+import { UpperCaseArrayObjects } from '../tools';
 
 class Ancients extends Component {
   state = {
@@ -10,10 +11,15 @@ class Ancients extends Component {
     gods: []
   };
 
+  setGods(gods) {
+    this.setState({ gods: UpperCaseArrayObjects(gods) });
+  }
+
   async getGods() {
     try {
       const response = await athena.get('');
-      this.setState({ gods: response.data, isLoading: false });
+      this.setGods(response.data);
+      this.setState({ isLoading: false });
     } catch (error) {
       console.log(error);
     }
@@ -24,7 +30,8 @@ class Ancients extends Component {
       const response = await athena.get('', {
         params: { search: searchTerm }
       });
-      this.setState({ gods: response.data.ancients, isLoading: false });
+      this.setGods(response.data.ancients);
+      this.setState({ isLoading: false });
     } catch (error) {
       console.log(error);
     }
