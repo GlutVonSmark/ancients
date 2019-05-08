@@ -6,10 +6,10 @@ const GodItem = ({ god }) => {
     addSuffix: true
   });
   return (
-    <li>
+    <div>
       Name: {god.name.toUpperCase()} superpower: {god.superpower.toUpperCase()}{' '}
       end of an era: {era.toUpperCase()}
-    </li>
+    </div>
   );
 };
 

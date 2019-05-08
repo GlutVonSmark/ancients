@@ -1,11 +1,11 @@
 import React from 'react';
-import AncientsList from './components/AncientsList';
+import Ancients from './components/Ancients';
 
 const App = () => {
   return (
     <div>
       <h1>Gods of Ancient Times</h1>
-      <AncientsList />
+      <Ancients />
     </div>
   );
 };

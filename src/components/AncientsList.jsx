@@ -1,72 +1,19 @@
-import React, { Component } from 'react';
-import athena from '../apis/athena';
-import _ from 'lodash';
-import { parse } from 'date-fns';
+import React from 'react';
 import GodItem from './GodItem';
-import SearchField from './SearchField';
 
-class AncientsList extends Component {
-  state = {
-    isLoading: true,
-    gods: []
-  };
-
-  async getGods() {
-    try {
-      const response = await athena.get('');
-      this.setState({ gods: response.data, isLoading: false });
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  async searchGods(searchTerm) {
-    try {
-      const response = await athena.get('', {
-        params: { search: searchTerm }
-      });
-      this.setState({ gods: response.data.ancients, isLoading: false });
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  memoizedSearchGod = _.memoize(this.searchGods);
-
-  componentDidMount() {
-    this.getGods();
-  }
-
-  generateListItems() {
-    if (this.state.gods) {
-      return this.state.gods.map(god => <GodItem key={god.name} god={god} />);
-    }
-  }
-
-  onSearchTermChange = term => {
-    if (term === '') {
-      this.getGods();
-    } else {
-      this.memoizedSearchGod(term);
+const AncientsList = props => {
+  const generateListItems = () => {
+    if (props.gods) {
+      return props.gods.map(god => <GodItem key={god.name} god={god} />);
     }
   };
 
-  render() {
-    const onSearchTermChange = _.debounce(term => {
-      this.onSearchTermChange(term);
-    }, 500);
-
-    return !this.state.isLoading ? (
-      <div>
-        {/* <SearchField onSearchTermChange={term => onSearchTermChange(term)} /> */}
-        <SearchField onSearchTermChange={onSearchTermChange} />
-        <h2>The List of Ancients</h2>
-        <ul>{this.generateListItems()}</ul>
-      </div>
-    ) : (
-      <h2>Loading...</h2>
-    );
-  }
-}
+  return (
+    <div>
+      <h2>The List of Ancients</h2>
+      <div>{generateListItems()}</div>
+    </div>
+  );
+};
 
 export default AncientsList;
