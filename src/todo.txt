@@ -1,6 +1,0 @@
-
--------NOTES-----------
-applicatino was created with create-react-app
-throttling was added to search
-point 5 was done with lodash memoize function 
-no tests were created due to lack of time

@@ -1,3 +1,7 @@
+throttling was added to search
+point 5 was done with lodash memoize function
+couple of tests for GodCard component were created using enzyme
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
