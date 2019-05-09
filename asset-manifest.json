@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ancients/static/css/main.fcd08b86.chunk.css",
+    "main.css": "/ancients/static/css/main.7d8ae0ab.chunk.css",
     "main.js": "/ancients/static/js/main.61bddf2e.chunk.js",
     "main.js.map": "/ancients/static/js/main.61bddf2e.chunk.js.map",
     "runtime~main.js": "/ancients/static/js/runtime~main.2ea40f08.js",
@@ -9,10 +9,10 @@
     "static/js/2.b29f618b.chunk.js": "/ancients/static/js/2.b29f618b.chunk.js",
     "static/js/2.b29f618b.chunk.js.map": "/ancients/static/js/2.b29f618b.chunk.js.map",
     "index.html": "/ancients/index.html",
-    "precache-manifest.914d8a8337ac79d77edd8fc56e985d25.js": "/ancients/precache-manifest.914d8a8337ac79d77edd8fc56e985d25.js",
+    "precache-manifest.489625605c153201b7708226f461f675.js": "/ancients/precache-manifest.489625605c153201b7708226f461f675.js",
     "service-worker.js": "/ancients/service-worker.js",
     "static/css/2.1e038316.chunk.css.map": "/ancients/static/css/2.1e038316.chunk.css.map",
-    "static/css/main.fcd08b86.chunk.css.map": "/ancients/static/css/main.fcd08b86.chunk.css.map",
+    "static/css/main.7d8ae0ab.chunk.css.map": "/ancients/static/css/main.7d8ae0ab.chunk.css.map",
     "static/media/App.css": "/ancients/static/media/pythia.fe0e5662.ttf"
   }
 }
