@@ -4,6 +4,7 @@ import _ from 'lodash';
 import SearchField from './SearchField/SearchField';
 import AncientsList from './AncientsList/AncientsList';
 import { UpperCaseArrayObjects } from '../tools';
+import Loader from 'react-loader-spinner';
 
 class Ancients extends Component {
   state = {
@@ -63,7 +64,11 @@ class Ancients extends Component {
         <AncientsList gods={this.state.gods} />
       </div>
     ) : (
-      <h2 className='centered loader'>Loading...</h2>
+      <div className='centered loader'>
+        <Loader type='Ball-Triangle' color='black' height='100' width='100' />
+      </div>
+
+      // <h2 className='centered loader'>Loading...</h2>
     );
   }
 }
