@@ -67,8 +67,6 @@ class Ancients extends Component {
       <div className='centered loader'>
         <Loader type='Ball-Triangle' color='black' height='100' width='100' />
       </div>
-
-      // <h2 className='centered loader'>Loading...</h2>
     );
   }
 }

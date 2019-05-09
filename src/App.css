@@ -46,7 +46,12 @@ h1 {
   min-height: 50rem;
 }
 
+#root {
+  min-height: 75vh;
+}
+
 footer {
+  margin: 10vw;
   margin-top: 10rem;
   text-align: right;
   color: lightgray;
