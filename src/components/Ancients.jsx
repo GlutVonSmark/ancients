@@ -63,7 +63,7 @@ class Ancients extends Component {
         <AncientsList gods={this.state.gods} />
       </div>
     ) : (
-      <h2 className='centered'>Loading...</h2>
+      <h2 className='centered loader'>Loading...</h2>
     );
   }
 }

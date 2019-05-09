@@ -42,6 +42,10 @@ h1 {
   text-align: center;
 }
 
+.loader {
+  min-height: 50rem;
+}
+
 footer {
   margin-top: 10rem;
   text-align: right;
