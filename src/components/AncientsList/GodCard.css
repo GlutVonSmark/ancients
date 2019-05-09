@@ -2,15 +2,15 @@
   border: 1px solid #cccccc;
   display: inline-block;
   text-align: left;
-  width: 400px;
-  margin: 10px;
+  margin: 1rem;
   box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  border-radius: 20px;
+  padding: 1rem;
+  border-radius: 2rem;
+  position: relative;
 }
 
 .godCard__text {
-  margin-left: 100px;
+  margin-left: 10rem;
 }
 
 .godCard__text div {
@@ -20,4 +20,7 @@
 
 .godCard img {
   float: left;
+  position: absolute;
+  top: 50%;
+  margin-top: -42.5px;
 }

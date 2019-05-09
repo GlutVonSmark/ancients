@@ -1,16 +1,3 @@
-the error Oracle
-review css (rem units)
-
-deploy to github
-
-
-
-add css
--favicon.
--container for app div
--create godCard
-
-
 
 -------NOTES-----------
 applicatino was created with create-react-app

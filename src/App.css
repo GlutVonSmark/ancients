@@ -8,14 +8,30 @@
   src: local('diogenes'), url(./fonts/DIOGENES.ttf) format('truetype');
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Stylish';
+  font-size: 1.6rem;
+}
+
 h1 {
   font-family: 'diogenes';
   font-size: 4.5em;
 }
 
-body {
-  font-family: 'Stylish';
-  font-size: 1.1em;
+@media only screen and (max-width: 840px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 2em;
+  }
 }
 
 .container {
@@ -24,4 +40,16 @@ body {
 
 .centered {
   text-align: center;
+}
+
+footer {
+  margin-top: 10rem;
+  text-align: right;
+  color: lightgray;
+  font-size: 1.2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: lightgray;
 }
